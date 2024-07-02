@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+}
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+main{
+    padding: 40px 120px 200px 120px;
+    background:  linear-gradient(90deg ,  hsl(13, 100%, 72%),hsl(353, 100%, 62%) );
+    position: relative;
+    font-family: "Overpass", sans-serif;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 0 150px;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 0 0 0 150px;
+    overflow: hidden;
+}
+.background img{
+ width:2500px;
+  object-fit: contain;
+  position: relative;
+ top: -1000px;
+ right: 300px;
+  border: solid;
+    
+
+}
+header{
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+header .logo{
+    margin-right: 60px;
+    z-index: 5;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+
+}
+.header ul{
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+}
+header ul li{
+    position: relative;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.arrow i{
+    color: rgba(255, 255, 255, 0.727);
+    transition: all ease-in-out 0.4s;
+}
+.arrow p:hover+i{
+    color: rgba(255, 255, 255, 0.99);
+}
+
+.arrow.rotate i{
+    transform:rotateZ(180deg);
+    transition: all ease-in-out 0.4s;
+}
+.arrow p{
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.727);
+}
+.arrow p:hover{
+   text-decoration:underline;
+   color: rgba(255, 255, 255, 0.99);
+}
+.hidden{
+  opacity: 0;
+}
+.links{
+  position: absolute;
+  bottom: -150px;
+  left: -20px;
+  color: hsl(207, 13%, 34%) ;
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 5px;
+  z-index: 6;
+  text-align: left;
+  transition: all ease-in-out 0.6s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.header ul li:nth-child(1) .links{
+    bottom: -210px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header ul li:nth-child(2) .links{
+    bottom: -181px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header ul li:nth-child(3) .links{
+    bottom: -152px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.links p{
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+.links p:hover{
+    color: rgba(0, 0, 0, 0.89);
+    font-weight: 600;
+}
+.logins button:nth-child(1){
+    color: rgba(255, 255, 255, 0.578);
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.logins button:nth-child(2){
+    background-color: white;
+     color:hsl(356, 100%, 66%) ;
+     border: none;
+     font-weight: 500;
+     padding: 15px 30px;
+     border-radius: 30px;
+     cursor: pointer;
+     transition:all 0.1s;
+}
+.logins button:nth-child(2):hover{
+    color: white;
+    background-color: hsla(206, 13%, 34%, 0.258) ;
+}
+.logins button:nth-child(1):hover{
+    color: white
+}
+main h1{
+    margin-top: 10%;
+    margin-bottom: 20px;
+    position: relative;
+   z-index: 2;
+   font-size: 70px;
+   font-weight: 500;
+   
+}
+main h1 + p{
+    z-index: 2;
+    position: relative;
+    color: rgba(255, 255, 255, 0.892);
+    font-weight: 400;
+    font-size: 24px;
+}
+.more{
+    display: flex;
+    gap: 20px;
+    z-index: 6;
+   align-self: center;
+   margin-top: 30px;
+}
+.more button:nth-child(1){
+        background-color: white;
+         color:hsl(356, 100%, 66%) ;
+         border: none;
+         font-weight: 500;
+         padding: 15px 30px;
+         border-radius: 30px;
+         cursor: pointer;
+         transition:all 0.1s;
+         z-index: 6;
+}
+.more button:nth-child(1):hover{
+    color: white;
+    background-color: hsl(356, 78%, 75%) ;
+}
+.more button:nth-child(2){
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px white;
+     color:hsl(0, 0%, 100%) ;
+     font-weight: 500;
+     padding: 15px 30px;
+     border-radius: 30px;
+     cursor: pointer;
+     transition:all 0.1s;
+     z-index: 6;
+}
+.more button:nth-child(2):hover{
+    color:hsl(356, 100%, 66%) ;
+background-color: hsl(0, 0%, 100%) ;
+}
+nav {
+    padding: 1rem;
+    display: none;
+    z-index: 5;
+    background-color: rgba(34, 37, 49, 0);
+}
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    display: none;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    z-index: 5;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.hiddenA{
+    display: block;
+}
+.a{
+ align-items: center;
+ padding-top: 60px;
+ margin-bottom: 250px;
+}
+.section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.a h2 {
+    color:    hsl(208, 49%, 24%);
+    font-size: 36px;
+    margin-bottom: 100px;
+    text-align: center;
+    width: 100%;
+}
+.a aside{
+    padding-left: 150px;
+    width: 100%;
+}
+aside h3{
+    color:    hsl(208, 49%, 24%);
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+aside p{
+    color:  hsla(206, 13%, 34%, 0.785) ;
+    line-height: 1.5;
+    font-size: 18px;
+}
+aside p:nth-child(2){
+  margin-bottom: 60px;
+}
+.a .img{
+    width: 100%;
+    position: relative;
+}
+.a img{
+   position: absolute;
+   right: -350px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.b{
+   background: linear-gradient(90deg , hsl(237, 17%, 21%) ,hsl(237, 23%, 32%) );
+  display: grid;
+  grid-template-columns:repeat(2,1fr) ;
+  padding: 100px 100px 100px 100px;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 120px 0 120px;
+  margin-bottom: 50px;
+}
+.b .img{
+    position: relative;
+    z-index: 5;
+   
+}
+.b img.phone{
+   width: 550px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 5;
+}
+.b h3{
+    color: white;
+    z-index: 5;
+}
+.b p{
+    color: rgba(255, 255, 255, 0.675);
+    font-size: 18px;
+    z-index: 2;
+
+}
+.b #circle{
+   position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.b .circle{
+top: -500px;
+position: absolute;
+left: -200px;
+z-index: -5;
+}
+.c{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    position: relative;
+    margin: 300px 100px 200px 0;
+    column-gap: 200px;
+}
+.c picture{
+    grid-area: 1 / 1 /2 / 2;
+ width: 100%;
+ position: relative;
+
+}
+.c picture img{
+   position: absolute;
+   left: -280px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 50px 100px;
+    background-color:  hsl(240, 10%, 16%);
+    border-radius: 0 100px 0 0 ;
+}
+footer img{
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: left;
+}
+footer div strong{
+    margin-bottom: 20px;
+    color: white;
+    display: block;
+}
+footer div p{
+    color: rgba(255, 255, 255, 0.67);
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+footer div p:hover{
+    text-decoration: underline;
+}
+.a p ,.a h3  {
+    animation: fade linear both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+    position: relative;
+}
+.b p ,.b h3 , .c p , .c h3  {
+    animation: fade2 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+    position: relative;
+}
+.a img{
+    animation: fade3 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+    position: relative;
+}
+.c picture{
+    animation: fade4 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+}
+.b img.phone{
+    animation: fade4 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+}
+@keyframes fade {
+    from{
+       right: 600px;
+       opacity: 0;
+    }
+    to{
+       right: 0;
+       opacity: 1;
+    }
+}
+@keyframes fade2 {
+    from{
+       left: 600px;
+       opacity: 0;
+    }
+    to{
+       left: 0;
+       opacity: 1;
+    }
+}
+@keyframes fade3 {
+    from{
+       opacity: 0.5;
+       left: 600px;
+    }
+    to{
+       opacity: 1;
+       left: 0;
+    }
+}
+@keyframes fade4 {
+    from{
+       opacity: 0.8;
+       right: 600px;
+    }
+    to{
+       opacity: 1;
+       right: 0;
+    }
+}
+
+
+@media (max-width:1250px){
+    .b{
+        padding: 30px;
+    }
+    .b img.phone{
+        width: 350px;
+        left: -20px;
+     }
+     .c picture img{
+        width: 700px;
+     }
+     .a aside{
+        padding-left: 20px;
+     }
+     .a img{
+      width: 700px;
+     }
+     aside p{
+        font-size: 14px;
+     }
+     aside h3{
+        font-size: 24px;
+     }
+     .c{
+        margin: 300px 20px 200px 0;
+        column-gap: 100px;
+    }
+}
+
+
+
+@media (max-width:950px){
+    main{
+        padding: 40px 25px 150px 25px;
+    }
+    .header ul{      
+        gap: 15px;
+        }
+    header .logo{
+        margin-right: 20px;
+     
+    }
+    .logins button:nth-child(1){
+        margin-right: 10px;
+    }
+    .logins button:nth-child(2){
+         padding: 10px 20px;
+         border-radius: 30px;
+    }
+    .arrow{
+        gap: 5px;
+    }
+}
+@media (max-width:800px){
+    .b{
+        padding: 20px;
+    }
+    .b img.phone{
+        width: 300px;
+        left: -20px;
+     }
+     .c picture img{
+        width: 600px;
+     }
+     .a aside{
+        padding-left: 20px;
+     }
+     aside p{
+        font-size: 14px;
+     }
+     aside h3{
+        font-size: 22px;
+     }
+     .c{
+        margin: 150px 20px 100px 0;
+        column-gap: 100px;
+    }
+}
+@media (max-width:600px){
+    body{
+        overflow-x: hidden;
+    }
+    .logins button:nth-child(1){
+        margin-right: 0px;
+    }
+    nav{
+        display: block;
+    }
+    .ham-menu {
+        height: 40px;
+        width: 35px;
+        display:block;
+        position: absolute;
+    }
+    main{
+        padding: 20px 20px 150px 20px;
+    }
+    .header{
+        flex-direction: column;
+       position: absolute;
+    width: 90%;
+     top: 100px;
+     background-color: white;
+     padding: 20px;
+     z-index: 999;
+     transition: all 0.4s ease-out;
+     border-radius: 5px;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    
+    }
+    .header ul{
+        flex-direction: column;
+        color:hsl(208, 49%, 24%) ;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: solid 1px rgba(128, 128, 128, 0.26);
+    }
+    .header ul li{
+       width: 100%;
+       display: grid;
+       place-items: center;
+        
+    }
+    .arrow p {
+        cursor: pointer;
+        color:hsl(208, 60%, 15%) ;
+        font-weight: 500;
+    }
+    .arrow p:hover{
+        color:hsl(208, 60%, 15%) ;
+    }
+    .arrow p.color{
+        color: hsla(206, 13%, 34%, 0.673);
+    }
+    .arrow i{
+        cursor: pointer;
+        color: hsl(356, 100%, 66%);
+    }
+    .links{
+        width: 100%;
+        background-color:  hsla(210, 6%, 47%, 0.204);
+        position:static;
+        color: hsl(207, 13%, 34%) ;
+        box-shadow:none;
+        text-align: center;
+        margin-top:20px ;
+        padding: 15px;
+      }
+      .links.show {
+        padding: 0;
+        margin: 0;
+        height: 0;
+        opacity: 0;
+        transition: all ease 0.6s;
+        overflow: hidden;
+      }
+      .header ul li:nth-child(1) .links{
+       transition: all ease 0.6s;
+        transform: none;
+    }
+    .header ul li:nth-child(2) .links{
+        transform: none;
+        transition: all ease 0.6s;
+    }
+    .header ul li:nth-child(3) .links{
+        transform: none;
+        transition: all ease 0.6s;
+    }
+      .links p{
+        color:  hsl(208, 49%, 24%);
+        z-index: 999;
+        width: 100%;
+      }
+      .arrow p:hover+i{
+        color: hsl(356, 100%, 66%);
+    }
+    .logins{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        z-index: 99;
+    }
+    .logins button:nth-child(1){
+        color:  hsl(237, 23%, 32%);
+        font-size: 16px;
+        transition: all 0.4s ease;
+        z-index: 99;
+    }
+    .logins button:nth-child(1):hover{
+        color:  hsl(237, 23%, 32%);
+    }
+    .logins button:nth-child(2){
+        background:  linear-gradient(90deg ,  hsl(13, 100%, 72%),hsl(353, 100%, 62%) );
+        color: white;
+        transition: all 0.4s ease;
+        z-index: 99;
+    }
+    .logins button:hover{
+        transform: scale(1.1);
+    }
+    .more{
+        z-index: 2;
+    }
+    .more button{
+        z-index: 2;
+    }
+    .land{
+        position: absolute;
+        top: -1000px;
+        transition: all 0.8s ease;
+        
+    }
+    main .logo{
+        width: 70px;
+    }
+    .background img{
+        width:1200px;
+         object-fit: contain;
+         position: relative;
+        top: -300px;
+        right: 300px;
+         border: solid;
+       }
+    main h1{
+        font-size: 32px;
+        margin-top: 20%;
+    }
+  .a h2{
+    position: static;
+    font-size: 24px;
+  }
+  .a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .section{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 50px;
+  }
+  aside{
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .a aside{
+    padding: 0;
+    margin-top: -100px
+  }
+  .a .img{
+    width: 100%;
+  }
+  .a img{
+    position: static;
+    width: 100%;
+  }
+  .b{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 20px;
+  }
+  .b .img{
+    position: static;
+    margin: 0;
+  }
+  .b img.phone{
+    position: static;
+    margin-bottom: 0;
+  }
+  .b aside{
+    margin-top: -150px;
+  }
+  .c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .c picture{
+    position: static;
+    margin: 0;
+    padding: 0;
+  }
+  .c picture img{
+    position: static;
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 50px;
+  }
+.a p ,.a h3  {
+    animation: fade linear both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+    position: relative;
+}
+.b p ,.b h3 , .c p , .c h3  {
+    animation: fade2 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+    position: relative;
+}
+.a img{
+    animation: fade3 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+    position: relative;
+}
+.c picture{
+    animation: fade4 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+    position: relative;
+}
+.b img.phone{
+    animation: fade4 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+}
+.b .img{
+    animation: fade4 ease-in-out both ;
+    animation-timeline: view();
+    animation-range: entry -100% contain 50%;
+    position: relative;
+}
+@keyframes fade {
+    from{
+       right: 300px;
+       opacity: 0;
+    }
+    to{
+       right: 0;
+       opacity: 1;
+    }
+}
+@keyframes fade2 {
+    from{
+       left: 300px;
+       opacity: 0;
+    }
+    to{
+       left: 0;
+       opacity: 1;
+    }
+}
+@keyframes fade3 {
+    from{
+       opacity: 0.5;
+       left: 300px;
+    }
+    to{
+       opacity: 1;
+       left: 0;
+    }
+}
+@keyframes fade4 {
+    from{
+       opacity: 0.8;
+       right: 300px;
+    }
+    to{
+       opacity: 1;
+       right: 0;
+    }
+}
+
+
+
+}
